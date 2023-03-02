@@ -4,6 +4,7 @@ from keras.models import model_from_json
 from keras.layers import LSTM, Dense
 from keras.callbacks import TensorBoard
 import streamlit as st
+import cv2
 
 json_file = open("model.json", "r")
 model_json = json_file.read()
