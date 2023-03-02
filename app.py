@@ -4,6 +4,10 @@ from keras.models import model_from_json
 from keras.layers import LSTM, Dense
 from keras.callbacks import TensorBoard
 import streamlit as st
+html=''' 
+  <h2 style="background-color:'tomato'">RealTime HandSign Detection</h2>   
+'''
+st.markdown(html,unsafe_allow_html=True)
 json_file = open("model.json", "r")
 model_json = json_file.read()
 json_file.close()
