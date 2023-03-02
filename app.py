@@ -4,16 +4,16 @@ from keras.models import model_from_json
 from keras.layers import LSTM, Dense
 from keras.callbacks import TensorBoard
 import streamlit as st
-html=''' 
-  <h2 style="background-color:'tomato'">RealTime HandSign Detection</h2>   
-'''
-st.markdown(html,unsafe_allow_html=True)
+
 json_file = open("model.json", "r")
 model_json = json_file.read()
 json_file.close()
 model = model_from_json(model_json)
-model.load_weights("SignLanguageDetectionUsingML-main\model.h5")
-
+model.load_weights("model.h5")
+html=''' 
+  <h2 style="color:'tomato'">RealTime HandSign Detection</h2>   
+'''
+st.markdown(html,unsafe_allow_html=True)
 colors = []
 for i in range(0,20):
     colors.append((245,117,16))

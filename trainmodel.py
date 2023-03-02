@@ -36,6 +36,6 @@ model.fit(X_train, y_train, epochs=200, callbacks=[tb_callback])
 model.summary()
 
 model_json = model.to_json()
-with open("SignLanguageDetectionUsingML-main\model.h5", "w") as json_file:
+with open("model.json", "w") as json_file:
     json_file.write(model_json)
 model.save('model.h5')
